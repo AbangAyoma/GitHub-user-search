@@ -1,0 +1,14 @@
+@import url('./components/designs/root.css');
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: var(--height-bd);
+  font-weight: var(--font-w-r);
+  background-color: var(--prim-white);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+

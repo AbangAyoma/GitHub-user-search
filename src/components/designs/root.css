@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    /* Colors */
+    --prim-blue: #0079FF;
+    --prim-grey: #697C9A;
+    --sec-grey: #4B6A9B;
+    --sec-blue: #2B3442;
+    --prim-white: #F6F8FF;
+    --sec-white: #FEFEFE;
+    --main-white: #FFFFFF;
+    --prim-black: #141D2F;
+    --main-black: #1E2A47;
+
+    /* Fonts */
+    --font-h1: 26px;
+    --height-h1: 38px;
+    --font-bd: 15px;
+    --height-bd: 25px;
+    --font-h2: 22px;
+    --height-h2: 33px;
+    --font-h3:16px; 
+    --height-h3:24px; 
+    --font-h4:13px; 
+    --height-h4:20px; 
+    --font-fam: "Space Mono";
+    --font-w-r: 400;
+    --font-style: normal;
+    --font-w-b: 700;
+}
