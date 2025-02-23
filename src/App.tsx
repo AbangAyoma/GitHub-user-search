@@ -1,22 +1,36 @@
-import { useState } from 'react'
-import './App.css'
+import React, { useState } from "react";
+import SearchBar from "./components/SearchBar";
+import UserCard from "./components/UserCard";
+import ThemeToggle from "./components/ThemeToggle";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const [user, setUser] = useState<any>(null);
+  const [error, setError] = useState("");
+
+  const fetchUser = async (username: string) => {
+    setError(""); 
+    setUser(null);
+
+    try {
+      const response = await fetch(`https://api.github.com/users/${username}`);
+      if (!response.ok) throw new Error("User not found");
+
+      const data = await response.json();
+      setUser(data);
+    } catch (err) {
+      setError("User not found. Please try again.");
+    }
+  };
 
   return (
-    <>
-      <h1>Abang</h1>
-    </>
-  )
-}
-export const fetchUser = async (username: string) => {
-  const response = await fetch(`https://api.github.com/users/${username}`);
-  if (!response.ok) {
-    console.error("User not found");
-    return null;
-  }
-  return await response.json();
+    <div className="app-container">
+      <ThemeToggle />
+      <SearchBar onSearch={fetchUser} />
+      {error && <p className="error">{error}</p>}
+      {user && <UserCard user={user} />}
+    </div>
+  );
 };
 
-export default App
+export default App;

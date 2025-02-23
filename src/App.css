@@ -1,10 +1,33 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
   text-align: center;
 }
 .dark-mode {
-  background-color: #1e1e1e;
+  background-color: var(--prim-black);
+  /* color: white; */
+}
+.app-container {
+  max-width: 500px;
+  /* margin: 50px auto; */
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+.header-dark {
+  background-color: #333;
   color: white;
+}
+
+.card-dark {
+  background-color: #252525;
+  color: white;
+  border: 1px solid #444;
+}
+body{
+  background-color: var(--prim-white)
 }
