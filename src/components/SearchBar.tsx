@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import './SearchBar.css';
 
-interface SearchBarProps {
-  onSearch: (username: string) => void;
-}
+// interface SearchBarProps {
+//   onSearch: (username: string) => void;
+// }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+const SearchBar: React.FC<{ onSearch: (username: string) => void }> = ({ onSearch }) => {
   const [username, setUsername] = useState("");
 
-  const handleSearch = () => {
-    if (username.trim() === "") return;
-    onSearch(username);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // this will help Prevent page refresh
+    if (username.trim()) {
+      onSearch(username); // Calling the search function here
+    }
   };
 
   return (
-    <div className="search-container">
+    <form onSubmit={handleSubmit} className="search-container">
       <input
         type="text"
         placeholder="Search GitHub username..."
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        className="search-input"
       />
-      <button onClick={handleSearch}>Search</button>
-    </div>
+      <button type="submit" className="search-button">Search</button>
+    </form>
   );
 };
 
