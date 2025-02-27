@@ -3,7 +3,7 @@
   font-family: var(--font-fam);
   line-height: var(--height-bd);
   font-weight: var(--font-w-r);
-  /* background-color: var(--prim-white); */
+  font-size: var(--font-bd);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
