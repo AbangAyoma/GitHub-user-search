@@ -14,7 +14,7 @@ const SearchBar: React.FC<{ onSearch: (username: string) => void }> = ({ onSearc
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // this will help Prevent page refresh
     if (username.trim()) {
-      onSearch(username); // Calling the search function here
+      onSearch(username); // Callings the search function here
     }
   };
 
