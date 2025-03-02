@@ -8,7 +8,7 @@ const ThemeToggle: React.FC = () => {
 
   const sun_icon = <i className="fas fa-sun"></i>;
   const moon_icon = <i className="fas fa-moon"></i>;
-  
+
   useEffect(() => {
     const body = document.body;
     const search = document.querySelector(".search-container");
@@ -32,7 +32,7 @@ const ThemeToggle: React.FC = () => {
     <h1>devfinder</h1>
     <button onClick={() => setDarkMode((prev) => !prev)}>
       {darkMode ?  "DARK" : "LIGHT"}
-      {darkMode ?  <i className="fas fa-moon"></i> : sun_icon }
+      {darkMode ?  moon_icon : sun_icon }
     </button>
     </div>
   );
