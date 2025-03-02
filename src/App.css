@@ -1,33 +1,36 @@
 #root {
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
-  /* padding: 2rem; */
-  text-align: center;
+  /* text-align: center; */
 }
 .dark-mode {
   background-color: var(--prim-black);
-  /* color: white; */
 }
 .app-container {
   max-width: 500px;
-  /* margin: 50px auto; */
   text-align: center;
 }
-
+.logo{
+  width: 730px;
+  height: 38px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
 .error {
   color: red;
   margin-top: 10px;
 }
-.header-dark {
-  background-color: #333;
+.search-dark {
+  background-color:var(--main-black);
   color: white;
 }
 
 .card-dark {
-  background-color: #252525;
+  background-color: var(--main-black);
   color: white;
-  border: 1px solid #444;
+  border: none;
 }
 body{
-  background-color: var(--prim-white)
+  background-color: var(--prim-white);
+  display: flex;
+  width: 100%;
 }
