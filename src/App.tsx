@@ -25,7 +25,9 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      <ThemeToggle />
+      <div className="logo">
+        <ThemeToggle />
+      </div>
       <SearchBar onSearch={fetchUser} />
       {error && <p className="error">{error}</p>}
       {user && <UserCard user={user} />}
