@@ -1,13 +1,16 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ThemeToggle.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
+<i className="fas fa-moon"></i>;
 const ThemeToggle: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     return localStorage.getItem("theme") === "dark";
   });
 
-  const sun_icon = <i className="fas fa-sun"></i>;
-  const moon_icon = <i className="fas fa-moon"></i>;
+  const sun_icon = <FontAwesomeIcon icon={faMoon} className="sun_ icon" />;
+  const moon_icon = <FontAwesomeIcon icon={faSun} className="moon_icon" />;
 
   useEffect(() => {
     const body = document.body;
@@ -29,11 +32,11 @@ const ThemeToggle: React.FC = () => {
 
   return (
     <div className="top-logo">
-    <h1>devfinder</h1>
-    <button onClick={() => setDarkMode((prev) => !prev)}>
-      {darkMode ?  "DARK" : "LIGHT"}
-      {darkMode ?  moon_icon : sun_icon }
-    </button>
+      <h1>devfinder</h1>
+      <button onClick={() => setDarkMode((prev) => !prev)}>
+        {darkMode ? moon_icon : sun_icon}
+        {darkMode ? "DARK" : "LIGHT"}
+      </button>
     </div>
   );
 };
