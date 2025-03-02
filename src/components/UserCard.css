@@ -1,15 +1,26 @@
+@import url("./designs/root.css");
 .user-card {
   padding-top: 35px;
   border-radius: 10px;
   width: 730px;
   height: 419px;
-  background-color: white;
+  display: flex;
+  margin-inline: auto;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  background-color: var(--main-white);
+  padding: 16px;
+  border-radius: 8px;
 }
-
+.position{
+  width: 100vw;
+}
 .user-card img {
   width: 117px;
   height: 117px;
+  border: 1px solid grey;
   border-radius: 50%;
   margin-left: 25px;
   float: left;
@@ -39,4 +50,27 @@
 .user-card .bio{
   width: 480px;
   height: 25px;
+}
+
+.top-row {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.top-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.details {
+  margin-left: 10px;
+}
+
+.bottom-row {
+  text-align: center;
+  margin-top: 10px;
 }
