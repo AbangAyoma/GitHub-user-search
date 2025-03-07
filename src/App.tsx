@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const [error, setError] = useState("");
 
   const fetchUser = async (username: string) => {
-    setError(""); 
+    setError("");
     setUser(null);
 
     try {
@@ -25,9 +25,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      <div className="logo">
-        <ThemeToggle />
-      </div>
+      <ThemeToggle />
       <SearchBar onSearch={fetchUser} />
       {error && <p className="error">{error}</p>}
       {user && <UserCard user={user} />}
