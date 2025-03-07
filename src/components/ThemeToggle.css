@@ -1,20 +1,37 @@
 .top-logo{
     color: var(--main-white);
     display: flex;
+    /* box-sizing: border-box; */
     justify-content: space-between;
-    width: 100vw;
+    width: 730px;
+    height: 38px;
+    padding: 10px;
+    margin-inline: auto;
     /* max-width: 900px; */
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     h1{
         font-family: var(--font-fam);
-        margin: 0;
+        font-weight: var(--font-w-b);
+        font-size: var(--font-h1);
+        line-height: 38.51px;
+        color: var(--sec-black);
+        margin-top: 0;
     }
     button{
+        width: 78px;
+        height: 20px;
         border: none; 
+        cursor: pointer;
         font-family: var(--font-fam);
-        color: var(--main-white);
+        color: var(--prim-grey);
+        line-height: 19.25px;
         background-color: inherit;
+        margin-block: auto;
+        span{
+            margin-left: 10px;
+            /* font-size: 20px; */
+            /* top: 3px; */
+            /* position: relative; */
+        }
     }
-
-    
 }
