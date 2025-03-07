@@ -1,8 +1,10 @@
 
 div.container {
+  box-sizing: border-box;
   width: 100vw;
 }
 .search-container {
+  box-sizing: border-box;
   width: 730px;
   max-width: 730px;
   height: 69px;
@@ -59,4 +61,7 @@ div.container {
   margin-block: auto;
   border-radius: 5px;
   cursor: pointer;
+}
+.search-container button:active{
+  content: "Searching...";
 }
