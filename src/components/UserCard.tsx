@@ -2,7 +2,14 @@ import React from "react";
 import "./UserCard.css";
 import "./FormatDate";
 import FormatDate from "./FormatDate";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faLink,
+  faBuilding,
+  faBlog,
+} from "@fortawesome/free-solid-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 interface UserCardProps {
   user: {
     avatar_url: string;
@@ -13,7 +20,7 @@ interface UserCardProps {
     followers: number;
     following: number;
     location: string;
-    twiter_username: string;
+    twitterUsername: string;
     blog_post: string;
     company: string;
     public_repos: number;
@@ -70,12 +77,39 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
               </div>
             </div>
             <div className="location">
-              <p>
-                <span>{user.location}</span>
-              </p>
-              <p>{user.twiter_username || "Not Availabe"}</p>
-              <p>{user.blog_post || "Not Availabe"}</p>
-              <p>{user.company}</p>
+              <div className="ups">
+                <p>
+                  <FontAwesomeIcon icon={faLocationDot} className="icons" />
+                  <span>{user.location}</span>
+                </p>
+                {/* <a
+                  href={`https://twitter.com/${twitterUsername}`}
+                  target="_blank"
+                  className="flex items-center space-x-2 text-blue-500 hover:text-blue-700"
+                > */}
+
+                {/* <span>@{twitterUsername}</span> */}
+                {/* </a> */}
+                <p>
+                  <FontAwesomeIcon icon={faTwitter} className="icons" />
+                  {user.twitterUsername || "Not Availabe"}
+                </p>
+              </div>
+              <div className="down">
+                <p>
+                  <FontAwesomeIcon icon={faLink} className="icons" />
+                  {user.blog_post || (
+                    <a target="_blank" href="https://github.blog">
+                      https://github.blog
+                    </a>
+                  )}
+                </p>
+                <p>
+                  {/* {" "} */}
+                  <FontAwesomeIcon icon={faBuilding} className="icons" />
+                  {user.company || "No company"}
+                </p>
+              </div>
             </div>
           </div>
         </div>
