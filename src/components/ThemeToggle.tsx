@@ -34,8 +34,8 @@ const ThemeToggle: React.FC = () => {
     <div className="top-logo">
       <h1>devfinder</h1>
       <button onClick={() => setDarkMode((prev) => !prev)}>
-        {darkMode ? moon_icon : sun_icon}
-        {darkMode ? "DARK" : "LIGHT"}
+        {darkMode ? "LIGHT" : "DARK"}
+        <span>{darkMode ? moon_icon : sun_icon}</span>
       </button>
     </div>
   );
