@@ -5,27 +5,37 @@
   width: 100vw;
   text-align: center;
 }
-/* .logo{
-  width: 730px;
-  height: 38px;
-  margin-bottom: 30px;
-  display: flex;
-  background-color: red;
-  justify-content: space-between;
-} */
+
 .error {
   color: red;
-  margin-top: 10px;
+  position: absolute;
+  top: 11.5%;
+  right: 10lvw;
 }
 .search-dark {
   background-color:var(--main-black);
   color: white;
+}
+.search-dark input {
+  color: var(--sec-white);
 }
 
 .card-dark {
   background-color: var(--main-black);
   color: white;
   border: none;
+}
+.card-dark h1, .card-dark .date{
+  color: var(--sec-white);
+}
+.card-dark .bio{
+  color: var(--sec-white);
+}
+.card-dark .followers{
+  background-color: var(--prim-black);
+}
+.card-dark .repos, .card-dark .follows, .card-dark .following,.card-dark .repos p, .card-dark .follows p, .card-dark .following p{
+  color: var(--prim-white);
 }
 body{
   background-color: var(--prim-white);
