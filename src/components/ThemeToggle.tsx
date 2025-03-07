@@ -3,7 +3,6 @@ import "./ThemeToggle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-<i className="fas fa-moon"></i>;
 const ThemeToggle: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     return localStorage.getItem("theme") === "dark";
@@ -16,23 +15,26 @@ const ThemeToggle: React.FC = () => {
     const body = document.body;
     const search = document.querySelector(".search-container");
     const card = document.querySelector(".user-card");
+    // const theme = document.querySelector("top-logo");
 
     if (darkMode) {
       body.classList.add("dark-mode");
       search?.classList.add("search-dark");
       card?.classList.add("card-dark");
+      // theme.classList.add("theme-dark");
       localStorage.setItem("theme", "dark");
     } else {
       body.classList.remove("dark-mode");
       search?.classList.remove("search-dark");
       card?.classList.remove("card-dark");
+      // theme.classList.remove("theme-dark");
       localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 
   return (
     <div className="top-logo">
-      <h1>devfinder</h1>
+      <h1 className="top-logo">devfinder</h1>
       <button onClick={() => setDarkMode((prev) => !prev)}>
         {darkMode ? "LIGHT" : "DARK"}
         <span>{darkMode ? moon_icon : sun_icon}</span>
