@@ -1,20 +1,18 @@
-#root {
-  /* text-align: center; */
-}
 .dark-mode {
   background-color: var(--prim-black);
 }
 .app-container {
-  max-width: 500px;
+  width: 100vw;
   text-align: center;
 }
-.logo{
+/* .logo{
   width: 730px;
   height: 38px;
   margin-bottom: 30px;
   display: flex;
+  background-color: red;
   justify-content: space-between;
-}
+} */
 .error {
   color: red;
   margin-top: 10px;
@@ -31,6 +29,4 @@
 }
 body{
   background-color: var(--prim-white);
-  display: flex;
-  width: 100%;
 }
