@@ -46,6 +46,7 @@ div.container {
   height: 25px;
   border: none;
   border-radius: 5px;
+  caret-color: var(--prim-blue);
 }
 
 .search-container button {
