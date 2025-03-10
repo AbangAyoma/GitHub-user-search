@@ -91,12 +91,6 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
                 {/* <span>@{twitterUsername}</span> */}
                 {/* </a> */}
                 <p>
-                  <FontAwesomeIcon icon={faTwitter} className="icons" />
-                  {user.twitterUsername || "Not Availabe"}
-                </p>
-              </div>
-              <div className="down">
-                <p>
                   <FontAwesomeIcon icon={faLink} className="icons" />
                   {user.blog_post || (
                     <a target="_blank" href="https://github.blog">
@@ -104,6 +98,13 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
                     </a>
                   )}
                 </p>
+              </div>
+              <div className="down">
+                <p>
+                  <FontAwesomeIcon icon={faTwitter} className="icons" />
+                  {user.twitterUsername || "Not Availabe"}
+                </p>
+
                 <p>
                   {/* {" "} */}
                   <FontAwesomeIcon icon={faBuilding} className="icons" />
