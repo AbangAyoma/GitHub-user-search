@@ -2,6 +2,7 @@
 :root {
     /* Colors */
     --prim-blue: #0079FF;
+    --active-blue:#60ABFF;
     --prim-grey: #697C9A;
     --sec-grey: #4B6A9B;
     --sec-blue: #2B3442;
@@ -10,6 +11,7 @@
     --main-white: #FFFFFF;
     --prim-black: #141D2F;
     --main-black: #1E2A47;
+    --dark-icon-hover:#90A4D4;
     --sec-black:#222731;
 
     /* Fonts */
