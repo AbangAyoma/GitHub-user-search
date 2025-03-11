@@ -14,7 +14,8 @@
 }
 .search-dark {
   background-color:var(--main-black);
-  color: white;
+  box-shadow: none;
+  color: var(--prim-white)
 }
 .search-dark input {
   color: var(--sec-white);
@@ -22,7 +23,7 @@
 
 .card-dark {
   background-color: var(--main-black);
-  color: white;
+  color: var(--main-white);
   border: none;
 }
 .card-dark h1, .card-dark .date{
@@ -37,6 +38,13 @@
 .card-dark .repos, .card-dark .follows, .card-dark .following,.card-dark .repos p, .card-dark .follows p, .card-dark .following p{
   color: var(--prim-white);
 }
+.card-dark .location p, .card-dark .location .icons{
+color: var(--main-white);
+}
 body{
   background-color: var(--prim-white);
+}
+
+@media screen and (min-width:573px){
+  
 }
