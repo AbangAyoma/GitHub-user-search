@@ -117,10 +117,12 @@
 }
 
 div.location{
-  top: -30px;
+  /* top: -30px; */
+  /* background-color: red; */
+  /* position: relative; */
   display: flex;
+  justify-content: space-around;
   width: 480px;
-  padding: 20px;
   p{
   font-size: 15px;
   font-weight: var(--font-w-r);
@@ -137,6 +139,7 @@ div.location{
     text-decoration: none;
     color: var(--sec-grey);
   }
+
   a:hover{
     text-decoration: underline;
   }
@@ -145,5 +148,16 @@ div.location{
   }
   .down{
     justify-content: space-around;
+  .down{
+    margin-left: 20px;
+  }
+
+  .down p:last-child{
+    .icons{
+      margin-left: -20px;
+    }
+  }
+  .ups p:first-child{
+    width: 40%;
   }
 }
