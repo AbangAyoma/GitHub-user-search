@@ -1,8 +1,7 @@
 @import url("./designs/root.css");
 .user-card {
   box-sizing: border-box;
-  padding-top: 35px;
-  border-radius: 10px;
+  /* padding-top: 35px; */
   width: 730px;
   height: 419px;
   font-family: var(--font-fam);
@@ -59,6 +58,9 @@
   margin: -15px 0 20px 0;
 }
 .user-card .bio{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: var(--font-w-r);
   font-size: var(--font-bd);
   font-family: var(--font-fam);
@@ -124,6 +126,9 @@ div.location{
   font-weight: var(--font-w-r);
   color: var(--sec-grey);
   }
+  p:hover{
+    text-decoration: underline;
+  }
   .icons{
     margin-right: 10px;
     color: var(--sec-grey);
@@ -131,6 +136,9 @@ div.location{
   a{
     text-decoration: none;
     color: var(--sec-grey);
+  }
+  a:hover{
+    text-decoration: underline;
   }
   .up{
     justify-content: space-around;
