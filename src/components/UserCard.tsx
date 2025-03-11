@@ -80,7 +80,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
               <div className="ups">
                 <p>
                   <FontAwesomeIcon icon={faLocationDot} className="icons" />
-                  <span>{user.location}</span>
+                  <span>{user.location || "Not Availabe"}</span>
                 </p>
                 {/* <a
                   href={`https://twitter.com/${twitterUsername}`}
