@@ -29,7 +29,13 @@
             margin-left: 10px;
         }
     }
+    button:hover{
+        color: var(--sec-black);
+    }
 }
 .theme-dark h1, .theme-dark button{
     color: var(--main-white);
+}
+.theme-dark button:hover{
+    color: var(--dark-icon-hover);
 }
