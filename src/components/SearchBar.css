@@ -15,9 +15,9 @@ div.container {
   padding: 10px;
   justify-content: space-between;
   box-shadow: 1px 7px 9px var(--prim-grey);
-  border-radius: 5px;
+  border-radius: 15px;
   align-self: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .search-cont{
   height: 50px;
@@ -60,9 +60,12 @@ div.container {
   height: 50px;
   border: none;
   margin-block: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 .search-container button:active{
   content: "Searching...";
+}
+.search-container button:hover{
+  background-color: var(--sec-grey);
 }
