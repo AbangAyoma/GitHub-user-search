@@ -3,10 +3,6 @@ import "./SearchBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-// interface SearchBarProps {
-//   onSearch: (username: string) => void;
-// }
-
 const SearchBar: React.FC<{ onSearch: (username: string) => void }> = ({
   onSearch,
 }) => {
