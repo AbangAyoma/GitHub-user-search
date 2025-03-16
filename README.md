@@ -1,50 +1,100 @@
-# React + TypeScript + Vite
+# GitHub User Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **GitHub User Search App** built with **React, TypeScript, and CSS**, allowing users to search for GitHub profiles and view relevant details.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search GitHub Users** by their username
+- **Display User Information** including avatar, name, bio, location, Twitter handle, and more
+- **Light/Dark Mode Toggle** for better UI experience
+- **Responsive Design** optimized for various screen sizes
+- **Error Handling** for invalid searches
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend:** React, TypeScript, CSS
+- **API:** GitHub Users API (`https://api.github.com/users/{username}`)
+- **Icons:** FontAwesome
 
-- Configure the top-level `parserOptions` property like this:
+## 📂 Project Structure
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+github-user-search/
+│── public/
+│── src/
+│   ├── components/
+│   │   ├── SearchBar.tsx  # Search input & button
+│   │   ├── UserCard.tsx   # Displays user details
+│   │   ├── ThemeToggle.tsx  # Light/Dark mode switch
+│   ├── App.tsx  # Main app component
+│   ├── App.css  # Global styles
+│   ├── index.tsx  # App entry point
+│── package.json  # Dependencies & scripts
+│── tsconfig.json  # TypeScript configuration
+│── README.md  # Project documentation
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔧 Installation & Setup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the repository:**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```sh
+   git clone https://github.com/yourusername/github-user-search.git
+   cd github-user-search
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```sh
+   npm start
+   ```
+
+4. **Build for production:**
+
+   ```sh
+   npm run build
+   ```
+
+## 📌 Usage
+
+- **Search:** Type a GitHub username and press "Search"
+- **View Profile:** Displays avatar, username, bio, location, and social links
+- **Toggle Theme:** Click the light/dark mode button to switch themes
+
+## 🌍 API Reference
+
+- **GitHub User API:** `https://api.github.com/users/{username}`
+- **Example Response:**
+  ```json
+  {
+    "login": "abangayoma",
+    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+    "html_url": "https://github.com/octocat",
+    "name": "Abang Laz",
+    "company": "@github",
+    "location": "San Francisco",
+    "twitter_username": "abangayoma",
+    "public_repos": 8,
+    "followers": 3938,
+    "following": 9,
+    "created_at": "2011-01-25T18:44:36Z"
+  }
+  ```
+
+## ✨ Contributing
+
+Contributions are welcome! Feel free to fork this repository, submit issues, or open pull requests.
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+🚀 **Developed by [Abang Ayoma]**
