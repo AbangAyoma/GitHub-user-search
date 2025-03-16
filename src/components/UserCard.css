@@ -50,7 +50,7 @@
   line-height: var(--height-h3);
   font-size: var(--font-h3);
   font-weight: var(--font-w-r);
-  width:79px;
+  /* width:79px; */
   margin-right: 50px;
   box-sizing: border-box;
   height: 24px;
@@ -161,3 +161,40 @@ div.location{
     width: 40%;
   }
 }
+}
+
+@media screen and (max-width:767px) {
+  .user-card{
+    width: 573px;
+  }
+  .user-card img{
+    margin: 0;
+    height: 117px;
+    width: 117px;
+  }
+  .user-card h3{
+    left: -56%;
+    bottom: -65px;
+    position: inherit;
+  }
+  
+  .user-card .date{
+    align-self: self-end;
+    /* width: fit-content; */
+    /* display: inline-block; */
+    /* position: relative; */
+    /* align-self: self-end; */
+    /* align-self: stretch; */
+    /* display: flex; */
+  }
+  .top-row{
+    position: relative;
+    margin-left: 35px;
+    background-color: red;
+    h1 {
+      width: 250px;
+    }
+  }
+}
+
+@media screen and (max-width:375px) {}
