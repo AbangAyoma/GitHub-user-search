@@ -1,8 +1,8 @@
-
 div.container {
   box-sizing: border-box;
   width: 100vw;
 }
+
 .search-container {
   box-sizing: border-box;
   width: 730px;
@@ -14,19 +14,21 @@ div.container {
   background-color: var(--main-white);
   padding: 10px;
   justify-content: space-between;
-  box-shadow: 1px 7px 9px var(--prim-grey);
+  box-shadow: 15px 15px 20px var(--prim-grey);
   border-radius: 15px;
   align-self: center;
   margin-bottom: 25px;
 }
-.search-cont{
+
+.search-cont {
   height: 50px;
   display: flex;
   padding: 2px 15px;
   margin-block: auto;
   text-align: center;
   justify-content: center;
-  span{
+
+  span {
     margin-right: 15px;
     margin-top: 13px;
     font-size: 20px;
@@ -49,13 +51,18 @@ div.container {
   caret-color: var(--prim-blue);
 }
 
+.search-container input::placeholder {
+  opacity: 1;
+  color: var(--sec-grey);
+}
+
 .search-container button {
   padding: 2px 15px;
   background-color: var(--prim-blue);
   font-family: var(--font-fam);
   font-weight: var(--font-w-r);
   font-style: var(--font-style);
-  color: white;
+  color: var(--main-white);
   width: 106px;
   height: 50px;
   border: none;
@@ -63,9 +70,62 @@ div.container {
   border-radius: 10px;
   cursor: pointer;
 }
-.search-container button:active{
+
+.search-container button:active {
   content: "Searching...";
 }
-.search-container button:hover{
+
+.search-container button:hover {
   background-color: var(--sec-grey);
+}
+
+@media screen and (max-width:767px) {
+  .search-container {
+    box-sizing: border-box;
+    width: 573px;
+    height: 69px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .search-container {
+    box-sizing: border-box;
+    width: 327px;
+    height: 60px;
+    text-align: center;
+  }
+
+  .search-container button {
+    position: relative;
+    left: -10px;
+    top: -2px;
+    height: 46px;
+    font-weight: var(--font-w-b);
+    font-size: 14px;
+  }
+
+  .search-container input {
+    width: 184px;
+    margin: 0;
+    position: relative;
+    top: 5px;
+    font-weight: var(--font-w-r);
+    font-size: var(--font-h4);
+    letter-spacing: 0;
+    line-height: var(--height-bd);
+  }
+
+  .search-dark input::placeholder {
+    opacity: 1;
+    color: var(--main-white);
+  }
+
+  .search-cont span {
+    margin: 0;
+    position: relative;
+    left: -10px;
+    top: 5px;
+    width: 20px;
+  }
 }
