@@ -1,7 +1,6 @@
 .top-logo{
     color: var(--main-white);
     display: flex;
-    /* box-sizing: border-box; */
     justify-content: space-between;
     width: 730px;
     height: 38px;
@@ -38,4 +37,22 @@
 }
 .theme-dark button:hover{
     color: var(--dark-icon-hover);
+}
+
+@media screen and (max-width:767px){
+    .top-logo{
+        width: 573px;
+        font-weight: var(--font-w-b);
+    } 
+}
+
+@media screen and (max-width:375px){
+    .top-logo{
+        width: 327px;
+        font-weight: var(--font-w-b);
+    }
+    .top-logo h1{
+        font-size: var(--font-h1);
+        width: 128px;
+    }
 }
