@@ -54,12 +54,12 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
           {/* <div className="details"> */}
           <h1>{user.name}</h1>
           <p className="date">Joined: {FormatDate(user.created_at)}</p>
+          <h3>&#64;{user.login}</h3>
           {/* </div> */}
         </div>
 
         {/* Second row with bio, followers, and repos */}
         <div className="bottom-row">
-          <h3>&#64;{user.login}</h3>
           <p className="bio"> {user.bio || "No bio available"}</p>
           <div className="details">
             <div className="followers">
@@ -77,7 +77,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
               </div>
             </div>
             <div className="location">
-              <div className="ups">
+              {/* <div className="ups"> */}
                 <p>
                   <FontAwesomeIcon icon={faLocationDot} className="icons" />
                   <span>{user.location || "Not Availabe"}</span>
@@ -98,8 +98,8 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
                     </a>
                   )}
                 </p>
-              </div>
-              <div className="down">
+              {/* </div> */}
+              {/* <div className="down"> */}
                 <p>
                   <FontAwesomeIcon icon={faTwitter} className="icons" />
                   {user.twitterUsername || "Not Availabe"}
@@ -110,7 +110,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
                   <FontAwesomeIcon icon={faBuilding} className="icons" />
                   {user.company || "No company"}
                 </p>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
