@@ -97,4 +97,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-🚀 **Developed by [Abang Ayoma]**
+🚀 **Developed by Abang Ayoma**
