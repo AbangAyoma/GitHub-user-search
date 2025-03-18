@@ -4,8 +4,8 @@ const FormatDate = (isoDate: string): string => {
     const date = new Date(isoDate);
     return new Intl.DateTimeFormat("en-US", {
       year: "numeric",
-      month: "long",
-      day: "numeric",
+      month: "short",
+      day: "2-digit",
     }).format(date);
   };
   
