@@ -9,8 +9,8 @@
 .error {
   color: red;
   position: absolute;
-  top: 11.5%;
-  right: 10lvw;
+  top: 7.8%;
+  right: 37%;
 }
 .search-dark {
   background-color:var(--main-black);
