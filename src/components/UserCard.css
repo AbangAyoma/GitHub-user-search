@@ -10,37 +10,34 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ddd;
   background-color: var(--main-white);
   padding: 16px;
   border-radius: 8px;
 }
-.position{
-  width: 100vw;
-}
 .user-card img {
   box-sizing: border-box;
-  /* width: 50px; */
-  height: 50px;
+  height: 117px;
   border-radius: 50%;
-  margin: 15px 0 0 25px;
+  margin: 25px 5px 0 5px;
 }
 
 .user-card h1 {
   line-height: var(--height-h1);
   color: var(--prim-black);
+  text-align: left;
   font-size: var(--font-h1);
   line-height: var(--height-h1);
   font-weight: var(--font-w-b);
-  position: relative;
-  margin: 10px;
-  /* width: 176px; */
+  width: 176px;
+  overflow: hidden;
   height: 39px;
 }
 .user-card .date{
   font-size: var(--font-bd);
   color: var(--prim-grey);
-  /* width: 166px; */
+  margin-top: 0;
+  width: 166px;
+  text-wrap: nowrap;
   line-height: 22.22px;
   height: 22px;
   font-weight: var(--font-w-r);
@@ -50,8 +47,8 @@
   line-height: var(--height-h3);
   font-size: var(--font-h3);
   font-weight: var(--font-w-r);
-  /* width:79px; */
-  margin-right: 50px;
+  text-wrap: nowrap;
+  width:79px;
   box-sizing: border-box;
   height: 24px;
   padding: 0;
@@ -100,9 +97,18 @@
   color: var(--sec-blue);
 }
 .top-row {
-  margin-top: 20px;
   display: flex;
-  align-items: flex-start;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  .up-date {
+    width: 80%;
+    margin: 0;
+  }
+}
+.up-date div{
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 }
@@ -117,16 +123,19 @@
 }
 
 div.location{
-  /* top: -30px; */
-  /* background-color: red; */
-  /* position: relative; */
+  flex-wrap: wrap;
+  height: 63px;
   display: flex;
   justify-content: space-around;
   width: 480px;
   p{
-  font-size: 15px;
-  font-weight: var(--font-w-r);
-  color: var(--sec-grey);
+    font-size: 15px;
+    font-weight: var(--font-w-r);
+    color: var(--sec-grey);
+    width: calc(50% - 2px);
+    gap: 3px;
+    align-items: center;
+    display: flex;
   }
   p:hover{
     text-decoration: underline;
@@ -142,59 +151,55 @@ div.location{
 
   a:hover{
     text-decoration: underline;
+    cursor: pointer;
   }
-  .up{
-    justify-content: space-around;
-  }
-  .down{
-    justify-content: space-around;
-  .down{
-    margin-left: 20px;
-  }
-
-  .down p:last-child{
-    .icons{
-      margin-left: -20px;
-    }
-  }
-  .ups p:first-child{
-    width: 40%;
-  }
-}
 }
 
 @media screen and (max-width:767px) {
   .user-card{
     width: 573px;
+    h3{
+      position: relative;
+      top: -35px;
+    }
+    
   }
   .user-card img{
-    margin: 0;
+    margin: 10px 0 0 22px;
     height: 117px;
     width: 117px;
   }
-  .user-card h3{
-    left: -56%;
-    bottom: -65px;
+  .user-card .date{
+    clear: right;
+    text-wrap: nowrap;
+    display: inline-block;
     position: inherit;
   }
-  
-  .user-card .date{
-    align-self: self-end;
-    /* width: fit-content; */
-    /* display: inline-block; */
-    /* position: relative; */
-    /* align-self: self-end; */
-    /* align-self: stretch; */
-    /* display: flex; */
+  .user-card .up-date div{
+    flex-direction: column;
+    align-items: unset;
   }
   .top-row{
+    p.date{
+      position: relative;
+      bottom: -15px;
+    }
+    gap: 20px;
     position: relative;
-    margin-left: 35px;
-    background-color: red;
     h1 {
-      width: 250px;
+      text-wrap: nowrap;
+      clear: right;
     }
   }
+  .followers{
+    width: 490px;
+  }
+  
 }
 
-@media screen and (max-width:375px) {}
+@media screen and (max-width:375px) {
+  .user-card{
+    width: 327px;
+    height: 517px;
+  }
+}
