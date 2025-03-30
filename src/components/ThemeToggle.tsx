@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./ThemeToggle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-const ThemeToggle: React.FC = () => {
+function ThemeToggle() {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     return localStorage.getItem("theme") === "dark";
   });
