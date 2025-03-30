@@ -3,9 +3,11 @@ import "./SearchBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const SearchBar: React.FC<{ onSearch: (username: string) => void }> = ({
-  onSearch,
-}) => {
+
+interface SearchProps{
+  onSearch: (username:string) => void;
+}
+function SearchBar({ onSearch}: SearchProps ){
   const [username, setUsername] = useState("");
   const [isSearching, setIsSearching] = useState(false);
 
