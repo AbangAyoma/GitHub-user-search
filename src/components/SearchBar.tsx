@@ -10,7 +10,7 @@ interface SearchProps{
 function SearchBar({ onSearch}: SearchProps ){
   const [username, setUsername] = useState("");
   const [isSearching, setIsSearching] = useState(false);
-
+isSearching;
   const handleSubmit = (e: React.FormEvent) => {
     if (!username) return; // Prevent empty search
     setIsSearching(true); // Set button to "Searching..."
