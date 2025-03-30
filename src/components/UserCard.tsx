@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./UserCard.css";
 import "./FormatDate";
 import FormatDate from "./FormatDate";
@@ -26,7 +26,7 @@ interface UserCardProps {
   };
 }
 
-const UserCard: React.FC<UserCardProps> = ({ user }) => {
+function UserCard ({ user }: UserCardProps){
   return (
     <div className="position">
       <div className="user-card">
@@ -68,7 +68,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
 
               <p>
                 <FontAwesomeIcon icon={faTwitter} className="icons" />
-                {user.twitterUsername || "Not Availabe"}
+                {user.twitterUsername || "Not Available"}
               </p>
               <p>
                 <FontAwesomeIcon icon={faLink} className="icons" />
