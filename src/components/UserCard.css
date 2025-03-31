@@ -223,7 +223,7 @@ div.location {
 
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:475px) {
   .user-card {
     width: 327px;
     height: 517px;
