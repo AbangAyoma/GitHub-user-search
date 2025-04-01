@@ -19,6 +19,7 @@
         width: 78px;
         height: 20px;
         border: none; 
+        font-weight: var(--font-w-b);
         cursor: pointer;
         font-family: var(--font-fam);
         color: var(--prim-grey);
