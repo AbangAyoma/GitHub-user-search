@@ -1,4 +1,5 @@
 .top-logo{
+    margin-top:144px;
     color: var(--main-white);
     display: flex;
     justify-content: space-between;
