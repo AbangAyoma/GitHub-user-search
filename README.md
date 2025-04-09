@@ -39,7 +39,7 @@ github-user-search/
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/github-user-search.git
+   git clone https://github.com/abangayoma/github-user-search.git
    cd github-user-search
    ```
 
